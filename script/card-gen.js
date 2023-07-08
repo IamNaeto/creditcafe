@@ -1,5 +1,3 @@
-import { increaseCount } from "./dashboard"; 
-
 const generateBtn = document.querySelector('#generate');
 const cardNum = document.querySelector('.card-num');
 const cardbrand = document.querySelector('.cardbrand');
@@ -167,20 +165,12 @@ downloadButton.addEventListener('click', (event) => {
     downloadDivAsImage(backCardToDownload, 'cardBack.png');
     downloadDivAsImage(cardToDownload, 'cardFront.png');
 
-    // Prepare the form data
-    const formData = new FormData();
-    formData.append('ctype', cardtype);
-    formData.append('cnumber', cno);
-    formData.append('cardvv', cardvv);
-    formData.append('expDate', expiry);
-
-    // Send the form data using AJAX
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', '/php/card-detail.php', true);
-    xhr.onload = function () {
-      // Handle the response from the server if needed
-    };
-    xhr.send(formData);
+    // // Prepare the form data
+    // const formData = new FormData();
+    // formData.append('ctype', cardtype);
+    // formData.append('cnumber', cno);
+    // formData.append('cardvv', cardvv);
+    // formData.append('expDate', expiry);
 
   } else {
     // Card not generated, display an error message
