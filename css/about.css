@@ -11,6 +11,7 @@
 }
 .us-info a{
     color: #F79E1B;
+    transition: 0.5s;
 }
 .us-info a:hover{
     color: #EB001B;
@@ -100,9 +101,6 @@ span:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.down{
-    margin-top: 50px;
 }
 
 @media screen and (max-width: 1030px ){
