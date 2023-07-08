@@ -50,6 +50,12 @@ input{
 input:valid{
     border: 1px solid green;
 }
+.info{
+    height: 40px;
+    margin: 2px 0;
+    padding: 2px;
+    text-align: center;
+}
 button{
     height: 50px;
     cursor: pointer;
