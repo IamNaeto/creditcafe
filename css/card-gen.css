@@ -1,0 +1,140 @@
+/* *{
+    border: 2px solid red;
+} */
+select{
+    width: 90%;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.card-doc-about h3{
+    margin: 30px 0 10px 0;
+}
+.card-doc-about p{
+    font-size: 12px;
+    color: #d80202;
+    padding-bottom: 30px;
+    height: 20px;
+    margin-bottom: 0;
+}
+.c-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.c-card img{
+    width: 60px;
+}
+.c-card .expire{
+    color: #FFFFFF;
+    font-size: 12px;
+}
+.card-doc .back{
+    padding-left: 0;
+    padding-right: 0;
+}
+.card-design .black{
+    background-color: #000000;
+    width: 100%;
+    height: 50px;
+}
+
+.card-design .cvlines{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 20px 5% 10px;
+    padding: 3px 5px;
+    background-color: #FFFFFF;
+}
+.cvlines .lines{
+    width: 80%;
+}
+.cvlines .lines hr{
+    border: 1px solid #302f2f;
+    margin: 1px 0;
+}
+.cvlines .cv{
+    color: #000000;
+}
+.cvlines .cv{
+    width: 20%;
+    text-align: center;
+}
+.back p{
+    font-size: 12px;
+    text-align: justify;
+    line-height: 14px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5%;
+    color: #FFFFFF;
+}
+.card-doc{
+    height: auto;
+    padding-bottom: 5px;
+}
+.card-doc .card-design{
+    height: 230px;
+}
+
+@media screen and (max-width: 1231px) {
+    .herobtn{
+        width: 70%;
+        padding: 10px 12%;
+    }
+}
+@media screen and (max-width: 896px){
+    .herobtn{
+        width: 60%;
+        padding: 10px 10%;
+    }
+    .back p{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 791px){
+    .herobtn{
+        width: 50%;
+        padding: 10px 8%;
+    }
+}
+@media screen and (max-width: 718px){
+    .herobtn{
+    width: 100%;
+    padding: 10px 15%;
+    }
+
+    #generate{
+        margin-bottom: 20px;
+    }
+    select{
+        width: 100%;
+    }
+    .brandInfo{
+        margin-bottom: 3px;
+    }
+    .card-doc .card-design{
+        height: 200px;
+    }
+    .card-doc-about h3{
+        margin-top: 15px;
+    }
+    .back p{
+        padding: 0;
+        font-size: 14px;
+        margin: 20px;
+    }
+    .card-design .black{
+        height: 30px;
+    }
+    
+    .card-design .cvlines{
+        margin: 10px 5% 10px;
+        padding: 1px 5px;
+    }
+}
