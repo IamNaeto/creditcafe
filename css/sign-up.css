@@ -1,0 +1,15 @@
+form{
+    border: 2px solid #FF5F00;
+}
+.read{
+    color:#FF5F00;
+    text-decoration: none;
+}
+.read:hover{
+    color: #EB001B;
+    text-decoration: underline;
+}
+.info{
+    height: 10px;
+    margin-top: 2px;
+}

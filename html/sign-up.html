@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" href="../img/Logo.png">
+    <link rel="stylesheet" href="../css/sign-in.css">
+    <link rel="stylesheet" href="../css/sign-up.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+<body>
+     <!-- Nav Section -->
+     <nav>
+        <div class="hero-logo">
+            <a href="../index.html">
+                <img src="../img/Logo.png" alt="">
+            </a>
+        </div>
+        <div class="hero-nav nav-links" id="nav-links">
+            <div class="nav-left">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="card-library.html">Card Library</a></li>
+            <li><a href="documentations.html">Documentations</a></li>
+            <li><a href="about.html">About</a></li>
+            </div>
+            <div class="nav-right">
+                <li class="signin"><a href="sign-in.html">Sign In</a></li>
+            <button class="herobtn1 navbtn"><a href="sign-up.html">Register</a></button>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <div class="hamburger-menu">
+              <div class="ham-bar bar-top"></div>
+              <div class="ham-bar bar-mid"></div>
+              <div class="ham-bar bar-bottom"></div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="left">
+            <div class="left-up">
+                <h1>Create your free account</h1>
+                <p>Do so much more when you create an account on CC Gen. Sign up now and start enjoying unlimited features.</p>
+                <a href="documentations.html" class="read">Read Documentations <i class="fa fa-long-arrow-right"></i></a>
+            </div>
+            <div class="img-sec">
+                <img src="../img/sign-up.png" alt="">
+            </div>
+        </div>
+
+        <div class="right">
+            <form action="" method="post" id="signup-form">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter Your First Name" required><br>
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" id="lname" placeholder="Enter Your Last Name" required><br>
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="Enter Your Email Address" required><br>
+		        <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter Your Username" required><br>
+                <label for="password">Password</label>           
+                <input type="password" name="password" id="pswd" placeholder="Enter Your Password" required><br>
+                <label for="cpassword">Confirm Password</label>
+                <input type="password" name="cpassword" id="cpswd" placeholder="Enter Your Password Again" required>
+                <p class="info"></p>
+                <button class="btn" id="signup-btn">Sign Up</button>             
+                <p>Already have an account? <a href="sign-in.html">Sign In.</a></p>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <img src="../img/Logo.png" alt="">
+        <h3>The cc_gen is an online digital library of credit card design which enable users to view, download and make use of credit cards samples as a resource in their own project.</h3>
+        <div class="hero-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="card-library.html">Card Library</a></li>
+            <li><a href="documentations.html">Documentations</a></li>
+            <li><a href="about.html">About</a></li>
+        </div>
+        <div class="socials">
+            <a href="#">
+                <i class="fa fa-facebook-square" ></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-twitter-square" ></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-instagram" ></i>
+            </a>
+        </div>
+        <h5>Copyright © 2023. CC_Gen. All rights reserved.</h5>
+</footer>
+
+<script src="../script/script.js"></script>
+<script src="../script/sign-up.js"></script>
+</body>
+</html>
