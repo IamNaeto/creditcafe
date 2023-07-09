@@ -22,4 +22,13 @@ lastColor.addEventListener('click', ()=>{
 	cardDesign.style.background = 'linear-gradient(134deg, #EB001B 20.86%, #000000 97%)'
 	cardDesignBack.style.background = 'linear-gradient(134deg, #EB001B 20.86%, #000000 97%)'
 })
-// documentations page script end
+// documentations page script end 
+
+// Check if user is logged in other to add dynamicness to the nav links
+const tryHeroBtn = document.getElementById('tryHerobtn')
+
+if (localStorage.getItem('userLoggedIn') === "true") {
+	tryHeroBtn.href = 'card-gen.html';
+  }else{
+	tryHeroBtn.href = 'sign-in.html';
+  }
