@@ -19,14 +19,28 @@ const signOutBtn = document.getElementById('signIn')
 const heroBtn = document.getElementById('herobtn')
 
 if (localStorage.getItem('userLoggedIn') === "true") {
-	regBtn.innerHTML = 'Dashboard';
-	regBtn.href = 'html/dashboard.html';
-	signOutBtn.innerHTML = 'Sign Out';
-	heroBtn.href = 'html/card-gen.html';
+	if (window.location.pathname === '/index.html') {
+		regBtn.innerHTML = 'Dashboard';
+		regBtn.href = 'html/dashboard.html';
+		signOutBtn.innerHTML = 'Sign Out';
+		heroBtn.href = 'html/card-gen.html';
+	  } else {
+		regBtn.innerHTML = 'Dashboard';
+		regBtn.href = 'dashboard.html';
+		signOutBtn.innerHTML = 'Sign Out';
+		heroBtn.href = 'card-gen.html';
+	  }  
   }else{
+	if (window.location.pathname === '/index.html') {
 	regBtn.innerHTML = 'Register'
 	regBtn.href = 'html/sign-up.html';
 	signOutBtn.innerHTML = 'Sign In';
 	heroBtn.href = 'html/sign-in.html';
+	} else{
+		regBtn.innerHTML = 'Register'
+		regBtn.href = 'sign-up.html';
+		signOutBtn.innerHTML = 'Sign In';
+		heroBtn.href = 'sign-in.html';
+	}
   }
   
