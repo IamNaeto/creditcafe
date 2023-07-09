@@ -31,7 +31,6 @@
 
 ### Backend
 - JavaScript
-- PHP
 
 ### DataBase
 - Local Storage
