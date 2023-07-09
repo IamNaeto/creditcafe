@@ -5,6 +5,20 @@ const select = document.querySelector('select');
 const brandInfo = document.querySelector('.brandInfo')
 const expiryDate = document.querySelector('.expire')
 const cardCVV = document.querySelector('.cv')
+
+// Update authenticated users fullname on the card
+const firstName = localStorage.getItem("firstname")
+const lastName = localStorage.getItem("lastname")
+const fullName = firstName + " " + lastName
+const holdersName = document.querySelector("#holder-name")
+
+if (localStorage.getItem('userLoggedIn') === "true") {
+	  holdersName.textContent = fullName
+  }else{
+    holdersName.textContent = "Card Holder’s Name"
+  }
+
+
 let cardvv = 0;
 let expiry = '';
 let cno = '';
