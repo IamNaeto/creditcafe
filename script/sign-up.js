@@ -71,7 +71,7 @@ function validatePassword(event) {
   }
 
    // Capture the form inputs and store the data in local storage
-   if (localStorage.getItem("email") && localStorage.getItem("password")) {
+   if (localStorage.getItem("username") && localStorage.getItem("password")) {
     info.textContent = 'User already exists. Please login instead.';
     info.style.color = '#ff0000';
     setTimeout(()=>{
