@@ -13,6 +13,7 @@ signInBtn.addEventListener("click", (event) => {
   const password = localStorage.getItem("password");
 
   if (userUsername === username && userPassword === password) {
+    localStorage.setItem('userLoggedIn', true);
     window.location.href = "card-gen.html";
   } else {
     info.textContent = 'User does not exist. Please sign up instead.';
