@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" href="../img/Logo.png">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+</head>
+
+<body>
+    <div class="dash-container">
+        <!-- side bar section -->
+        <div class="side-bar">
+            <div class="bar-menu" id="menu">
+                <a href="../index.html">
+                <img src="../img/Logo.png" alt="" class="side-img" id="side-logo">
+                </a>
+                <p class="current" id="dashboardNav"><img src="../img/Dashboard.png" alt=""><span> Dashboard</span></p>
+                <p id="profileNav"><img src="../img/User.png" alt=""><span>Profile</span></p>
+                <p id="downloadNav"> <img src="../img/import.png" alt=""><span>Downloaded Cards</span></p>
+            </div>
+        </div>
+        <!-- dashboard section -->
+        <div class="dashboard">
+            <div class="dashboard-container">
+                <div class="dash-head">
+                    <h1>Dashboard</h1>
+
+                    <div class="dashhead-user">
+                        <i class="fa fa-user-circle"></i>
+                        <p class="userFN">user</p>
+                        <div class="user-prop">
+                            <i class="fa fa-chevron-circle-down" id="user-icon"></i>
+                            <div class="user-links">
+                                <a href="../index.php">Home</a>
+                                <a href="card-library.php">Card Library</a>
+                                <a href="documentations.php">Documentations</a>
+                                <a href="about.php">About</a>
+                                <a href="../php/logout.php">Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- users info section -->
+                <div class="users-info">
+                    <div class="info">
+                        <i class="fa fa-user-circle"></i>
+                        <div>
+                            <h2>Hello <span class="userFullN">User FullName</span>   </h2>
+                            <p>Welcome Back</p>
+                        </div>
+                    </div>
+                    <div class="lastlog">
+                        <p>Your last login was on</p>
+                        <h3 id="lastSeen">Thursday 15th June 2023</h3>
+                    </div>
+                </div>
+
+                <!-- Actions section -->
+                <div class="actions">
+                    <div class="download sec">
+                        <img src="../img/download-icon.png" alt="">
+                        <div class="load-count">
+                            <h2 id="loadCount">0</h2>
+                            <p>Downloaded Cards</p>
+                        </div>
+                    </div>
+                    <div class="saved sec">
+                        <img src="../img/save-icon.png" alt="">
+                        <div class="load-count">
+                            <h2 id="savedCount">0</h2>
+                            <p>Saved Cards</p>
+                        </div>
+                    </div>
+                </div>
+
+		<!-- downloaded cards sec -->
+                <div class="downloads-details">
+                    <h1>Downloaded Cards</h1>
+                        <div class="cardDetailsInfo">
+                                <div>
+                                <h3>Card Type</h3>
+                                <h3>Card Number</h3>
+                                <h3>CVV</h3>
+                                <h3>Expiry Date</h3>
+                                </div>
+                                <div>
+                                    <p>MasterCard</p>
+                                    <p>423 235 625 256 256</p>
+                                    <p>358</p>
+                                    <p>10/2026</p>
+                                </div>
+                        </div>
+                </div>
+            </div>
+
+
+            <!-- Profile Section Dashboard -->
+            <div class="profile-container" id="profile">
+                <div class="dash-head">
+                    <h1>Profile</h1>
+
+                    <div class="dashhead-user">
+			<i class="fa fa-user-circle"></i>
+			<p class="userFN2">User</p>
+                        <div class="user-prop">
+                            <i class="fa fa-chevron-circle-down" id="user-icon"></i>
+                            <div class="user-links">
+                                <a href="">Home</a>
+                                <a href="">Card Library</a>
+                                <a href="">Documentations</a>
+                                <a href="">About</a>
+                                <a href="">Sign Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-box">
+                    <div class="profile-photo">
+			<i class="fa fa-user-circle"></i>
+			<h1 class="userFullN2">user FullName</h1>
+                 	<p class="userM">User Mail</p>
+                    </div>
+                    <div class="profile-details">
+                        <h1>Users Details</h1>
+                        <form action="#profile" id="usersDetails">
+			    <div class="form-container">
+				<div class="left">
+                                	<label for="">First Name</label><br>
+                                	<input type="text" name="fname" value="" class="fName" readonly><br>
+
+                            		<label for="">Last Name</label><br>
+                           		<input type="text" name="lname" value="" class="lName" readonly><br>
+                           	</div>
+
+                           	<div class="right">
+                                	<label for="">UserName</label><br>
+                            		<input type="text" name="username" value="" class="userN" readonly><br>
+
+                            		<label for="">Email Address</label><br>
+                            		<input type="email" name="email" value="" class="userMail" readonly>
+                           	</div>
+                            </div>
+
+                            <input type="submit" value="Edit" class="edit btn"> <input type="submit" value="Save"
+                                class="save btn" disabled>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+	    <!-- downloaded cards dashboard -->
+	    <div class="download-wrapper">
+                <div class="dash-head">
+                    <h1>Downloaded Cards<h1>
+
+                        <div class="dashhead-user">
+                            <i class="fa fa-user-circle"></i>
+                            <p class="userFN3">User</p>
+                                        <div class="user-prop">
+                                            <i class="fa fa-chevron-circle-down" id="user-icon"></i>
+                                            <div class="user-links">
+                                                <a href="">Home</a>
+                                                <a href="">Card Library</a>
+                                                <a href="">Documentations</a>
+                                                <a href="">About</a>
+                                                <a href="">Sign Out</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                </div>
+                <!-- download history -->
+                <div class="download-history">
+                    <div class="download-num">
+                        <h3>All Downloaded Cards </h3>
+                        <h3>(0)</h3>
+                    </div>
+
+                    <div class="card-search">
+                        <p>Quick search a card</p>
+                        <div>
+                            <input type="text" placeholder="Enter Card Name" class="cardNameInput">
+                            <input type="submit" value="Search" id="search">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="downloads-details">
+                    <div class="cardDetailsInfo">
+                        <div>
+                        <h3>Card Type</h3>
+                        <h3>Card Number</h3>
+                        <h3>CVV</h3>
+                        <h3>Expiry Date</h3>
+                        </div>
+                        <div>
+                            <p>MasterCard</p>
+                            <p>423 235 625 256 256</p>
+                            <p>358</p>
+                            <p>10/2026</p>
+                        </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Copyright © 2023. CC_Gen. All rights reserved.</p>
+
+        <div class="socials">
+            <a href="#">
+                <i class="fa fa-facebook-square"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-twitter-square"></i>
+            </a>
+            <a href="#">
+                <i class="fa fa-instagram"></i>
+            </a>
+        </div>
+
+        <div class="foot-links">
+            <a href="../index.html">Home</a>
+            <a href="card-library.html">Card Library</a>
+            <a href="documentations.html">Documentations</a>
+            <a href="about.html">About</a>
+        </div>
+
+    </footer>
+
+    <script src="../script/dashboard.js"></script>
+</body>
+
+</html>
