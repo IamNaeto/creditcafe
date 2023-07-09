@@ -1,3 +1,6 @@
+/* *{
+    border: 2px solid red;
+} */
 main{
     display: flex;
     align-items: center;
@@ -52,9 +55,11 @@ input:valid{
 }
 .info{
     height: 40px;
-    margin: 2px 0;
-    padding: 2px;
     text-align: center;
+    margin-top: 5px;
+    margin-bottom: 4px;
+    line-height: 16px;
+    padding: 2px;
 }
 button{
     height: 50px;
