@@ -15,6 +15,9 @@ signInBtn.addEventListener("click", (event) => {
   if (userUsername === username && userPassword === password) {
     localStorage.setItem('userLoggedIn', true);
     window.location.href = "card-gen.html";
+  }else if(userUsername === "" || userPassword === ""){
+    info.textContent = 'Please fill in your login details';
+    info.style.color = '#ff0000';
   } else {
     info.textContent = 'User does not exist. Please sign up instead.';
     info.style.color = '#ff0000';
