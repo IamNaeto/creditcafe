@@ -94,45 +94,55 @@ setInterval(updateLastSeen, 60000);
     }
 
 // Update dynamicness on the dashboard pages
-const FN = localStorage.getItem("firstname")
-const LN = localStorage.getItem("lastname")
-const UN = localStorage.getItem("username")
-const mail = localStorage.getItem("email")
-const fullN = FN + " " + LN
+// Retrieve user data from local storage
+let users = JSON.parse(localStorage.getItem('users')) || [];
 
-const userFN = document.querySelector(".userFN")
-userFN.innerHTML = FN
+// Retrieve username of the currently logged-in user from session storage
+const loggedInUsername = sessionStorage.getItem('loggedInUser');
 
-const userFullN = document.querySelector(".userFullN")
-userFullN.innerHTML = fullN
+// Function to find the currently logged-in user
+function findLoggedInUser(username) {
+  return users.find((user) => user.username === username);
+}
 
-const userFN2 = document.querySelector(".userFN2")
-userFN2.innerHTML = FN
+// Check if any user DATA Exist
+if (loggedInUsername) {
+  // Find the currently logged-in user
+  let loggedInUser = findLoggedInUser(loggedInUsername);
 
-const userFullN2 = document.querySelector(".userFullN2")
-userFullN2.innerHTML = fullN
+  if (loggedInUser) {
+    if (loggedInUser.userLoggedIn === true) {
+      // Update user details on the profile form
+      const usersFName = document.querySelector('.fName');
+      const usersUsername = document.querySelector('.userFN');
+      const usersUsername2 = document.querySelector('.userFN2');
+      const usersUsername3 = document.querySelector('.userFN3');
+      const usersLName = document.querySelector('.lName');
+      const usersUName = document.querySelector('.userN');
+      const usersMail = document.querySelector('.userMail');
+      const usersM = document.querySelector('.userM');
+      const usersFullName = document.querySelector('.userFullN');
+      const usersFullName2 = document.querySelector('.userFullN2');
 
-const userM = document.querySelector(".userM")
-userM.innerHTML = mail
 
-const userFN3 = document.querySelector(".userFN3")
-userFN3.innerHTML = FN
+      usersFName.value = loggedInUser.firstname;
+      usersLName.value = loggedInUser.lastname;
+      usersUName.value = loggedInUser.username;
+      usersMail.value = loggedInUser.email;
+      usersM.textContent = loggedInUser.email;
+      usersUsername.innerHTML = loggedInUser.username;
+      usersUsername2.innerHTML = loggedInUser.username;
+      usersUsername3.innerHTML = loggedInUser.username;
+      usersFullName.textContent = loggedInUser.firstname + " " + loggedInUser.lastname;
+      usersFullName2.textContent = loggedInUser.firstname + " " + loggedInUser.lastname;
+    }
+  }
+}
 
-// Update users detials on the profile form
-const usersForm = document.querySelector('#usersDetails');
-const usersFName = document.querySelector('.fName');
-const usersLName = document.querySelector('.lName');
-const usersUName = document.querySelector('.userN');
-const usersMail = document.querySelector('.userMail');
+
+// Users Detials Edit and Submit I will still come back to this!!!
 const editBtn = document.querySelector('.edit');
 const saveBtn = document.querySelector('.save');
-
-usersFName.value = FN
-usersLName.value = LN
-usersUName.value = UN
-usersMail.value = mail
-
-// Users Detials Edit and Submit 
 editBtn.addEventListener('click', (event) => {
   event.preventDefault();
   usersFName.removeAttribute("readonly");

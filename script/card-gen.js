@@ -6,17 +6,35 @@ const brandInfo = document.querySelector('.brandInfo')
 const expiryDate = document.querySelector('.expire')
 const cardCVV = document.querySelector('.cv')
 
-// Update authenticated users fullname on the card
-const firstName = localStorage.getItem("firstname")
-const lastName = localStorage.getItem("lastname")
-const fullName = firstName + " " + lastName
-const holdersName = document.querySelector("#holder-name")
+// Update authenticated user's fullname on the card
+const holdersName = document.querySelector("#holder-name");
 
-if (localStorage.getItem('userLoggedIn') === "true") {
-	  holdersName.textContent = fullName
-  }else{
-    holdersName.textContent = "Card Holder’s Name"
+// // Retrieve username of the currently logged-in user from session storage
+// const loggedInUsername = sessionStorage.getItem('loggedInUser');
+
+// // Retrieve user data from local storage
+// let users = JSON.parse(localStorage.getItem('users')) || [];
+
+// Function to find the currently logged-in user
+function findLoggedInUser(username) {
+  return users.find((user) => user.username === username);
+}
+
+// Check if any user DATA Exist
+if (loggedInUsername) {
+  // Find the currently logged-in user
+  let loggedInUser = findLoggedInUser(loggedInUsername);
+
+  if (loggedInUser) {
+    if (loggedInUser.userLoggedIn === true) {
+      const fullName = loggedInUser.firstname + " " + loggedInUser.lastname;
+      holdersName.textContent = fullName;
+    } else {
+      holdersName.textContent = "Card Holder’s Name";
+    }
   }
+}
+
 
 
 let cardvv = 0;

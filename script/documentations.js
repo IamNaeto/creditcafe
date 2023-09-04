@@ -27,8 +27,12 @@ lastColor.addEventListener('click', ()=>{
 // Check if user is logged in other to add dynamicness to the nav links
 const tryHeroBtn = document.getElementById('tryHerobtn')
 
-if (localStorage.getItem('userLoggedIn') === "true") {
-	tryHeroBtn.href = 'card-gen.html';
-  }else{
-	tryHeroBtn.href = 'sign-in.html';
+
+  let loggedInUser = findLoggedInUser(loggedInUsername);
+  if (window.location.pathname === '/html/documentations.html'){
+	if (loggedInUser) {
+		tryHeroBtn.href = 'card-gen.html';
+	  }else{
+		tryHeroBtn.href = 'sign-in.html';
+	  }
   }
